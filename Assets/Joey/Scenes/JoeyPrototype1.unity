@@ -232,12 +232,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 847641595}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc956f18e7b678348bc5e8bcf813c3c7, type: 3}
+  m_Script: {fileID: 11500000, guid: 359809974e0b65148bff1d948191788e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   scenesToLoad:
   - name: JoeyPrototype2
     loadOnStart: 1
+  characterController: {fileID: 95772214}
 --- !u!4 &847641597
 Transform:
   m_ObjectHideFlags: 0
