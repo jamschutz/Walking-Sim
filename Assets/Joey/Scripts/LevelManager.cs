@@ -8,10 +8,10 @@ namespace jsch
 {
     public class LevelManager : MonoBehaviour
     {
-    
-    // =========================================================================== //
-    // ==============       Variables                   ========================== //
-    // =========================================================================== //
+
+    // ------------------------------------------------------- //
+    // ----------- Variables --------------------------------- //
+    // ------------------------------------------------------- //
         [System.Serializable]
         public class SceneData
         {
@@ -21,7 +21,7 @@ namespace jsch
 
         public SceneData[] scenesToLoad;
 
-        // this is used so we make sure to delete it if we aren't the singleton instance
+        // we'll delete the character controller if we aren't the singleton instance
         public GameObject characterController; 
         public GameObject[] stuffToDeleteNoMatterWhat;
 
@@ -30,21 +30,26 @@ namespace jsch
         public static LevelManager Instance { get { return instance; } }
 
         
-    // =========================================================================== //
-    // ==============       Main methods                ========================== //
-    // =========================================================================== //
+        
+    // ------------------------------------------------------- //
+    // ----------- Main Methods ------------------------------ //
+    // ------------------------------------------------------- //
 
         // ensure there are no other LevelManagers in the scene
         private void Awake()
         {
+            // always delete "stuff to delete no matter what"
             foreach(var obj in stuffToDeleteNoMatterWhat) {
                 Destroy(obj);
             }
 
+            // if already a singleton instance in the world,
+            // delete ourselves and our character controller
             if (instance != null && instance != this) {
                 Destroy(characterController);
                 Destroy(this.gameObject);
             } 
+            // otherwise, mark ourselves as the singleton
             else {
                 instance = this;
             }
@@ -52,6 +57,7 @@ namespace jsch
 
         void Start()
         {
+            // load scenes
             foreach(var sceneData in scenesToLoad) {
                 if(sceneData.loadOnStart) {
                     SceneManager.LoadScene(sceneData.name, LoadSceneMode.Additive);
