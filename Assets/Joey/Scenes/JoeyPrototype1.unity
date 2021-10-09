@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.20980865, g: 0.18450463, b: 0.13489339, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -19867,9 +19867,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 331480469}
     m_Modifications:
+    - target: {fileID: 2466802919769513232, guid: 6326eae580646944d907309852cc7491, type: 3}
+      propertyPath: m_Range
+      value: 30.700014
+      objectReference: {fileID: 0}
+    - target: {fileID: 2466802919769513232, guid: 6326eae580646944d907309852cc7491, type: 3}
+      propertyPath: m_DrawHalo
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2466802919769513232, guid: 6326eae580646944d907309852cc7491, type: 3}
+      propertyPath: m_Intensity
+      value: 10.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 2466802919769513232, guid: 6326eae580646944d907309852cc7491, type: 3}
+      propertyPath: m_SpotAngle
+      value: 64.493774
+      objectReference: {fileID: 0}
     - target: {fileID: 2904115674617831534, guid: 6326eae580646944d907309852cc7491, type: 3}
       propertyPath: m_Name
       value: Giraffe Car
+      objectReference: {fileID: 0}
+    - target: {fileID: 2904115674617831534, guid: 6326eae580646944d907309852cc7491, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2904115674617831535, guid: 6326eae580646944d907309852cc7491, type: 3}
       propertyPath: m_RootOrder
@@ -23937,13 +23957,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1497912816}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalRotation: {x: 0.40342534, y: 0.24271871, z: 0.8182086, w: 0.32995516}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: -7.525, y: 55.84, z: 132.083}
 --- !u!43 &1531957460
 Mesh:
   m_ObjectHideFlags: 0
