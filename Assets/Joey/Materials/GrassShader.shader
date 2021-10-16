@@ -173,7 +173,7 @@ Shader "Custom/Terrain/Grass"
         }
 
         // add final vertex at the top
-        triStream.Append(generateGrassVertex(pos, input[0].worldPosition, 0, height, forward, float2(0.5, 1), transformationMatrix));
+        // triStream.Append(generateGrassVertex(pos, input[0].worldPosition, 0, height, forward, float2(0.5, 1), transformationMatrix));
 	}
 	ENDCG
 
