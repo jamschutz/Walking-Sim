@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Materialize/Shaders/Materialize_Property.shader.meta
+guid: 3f38de01e76906e49a5e262782645b3d
+timeCreated: 1443732127
+licenseType: Pro
+=======
+guid: efd4d470b8bc45944b30dd126d41427f
+>>>>>>> 3f19a70 (City Playtest Blockout):Assets/Lorg/Lorg_Mat/Shaders/Waves.shader.meta
+ShaderImporter:
+  defaultTextures: []
+<<<<<<< HEAD:Assets/Materialize/Shaders/Materialize_Property.shader.meta
+=======
+  nonModifiableTextures: []
+  preprocessorOverride: 0
+>>>>>>> 3f19a70 (City Playtest Blockout):Assets/Lorg/Lorg_Mat/Shaders/Waves.shader.meta
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

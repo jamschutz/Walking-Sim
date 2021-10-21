@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Materialize/Shaders/Materialize_Property_Displace.shader.meta
+guid: 2a3a6daee1f38e346b5be8d0a2bd34d9
+timeCreated: 1443733116
+licenseType: Pro
+=======
+guid: 4b1d7be2a0feb684bab635b2996c6cb6
+>>>>>>> 3f19a70 (City Playtest Blockout):Assets/NMGSandDunesMat/Shaders/Noise.hlsl.meta
+ShaderImporter:
+  defaultTextures: []
+<<<<<<< HEAD:Assets/Materialize/Shaders/Materialize_Property_Displace.shader.meta
+=======
+  nonModifiableTextures: []
+  preprocessorOverride: 0
+>>>>>>> 3f19a70 (City Playtest Blockout):Assets/NMGSandDunesMat/Shaders/Noise.hlsl.meta
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
