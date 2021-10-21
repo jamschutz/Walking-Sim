@@ -1,9 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 <<<<<<< HEAD:Assets/EverythingLibrary/EverythingLibrary_Buildings_001.meta
 guid: 7791714d3cad4c4408135545142c57ee
 =======
 guid: 82fc10c300ff1284fa58d6dc80c5cb49
 >>>>>>> 3f19a70 (City Playtest Blockout):Assets/Lorg.meta
+=======
+guid: 7791714d3cad4c4408135545142c57ee
+>>>>>>> 45bdd53902fbd721b298582a20a7b417e4faa73f
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
