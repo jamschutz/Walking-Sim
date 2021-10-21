@@ -9,8 +9,8 @@ namespace jsch
     public class Dialog 
     {
         public string text;
+        public Color textColor;
         public string speakerName;
-        public bool showSpeakerName = false;
         public bool waitForClick = false;
         public float waitTime = 5.0f;
     }
@@ -46,6 +46,9 @@ namespace jsch
             textMeshPro = GetComponent<TMP_Text>();
             currentDialogIndex = 0;
             timeBetweenTypingChars = maxTimeBetweenTypingChars - typingSpeed;
+
+            // wipe text at the start
+            textMeshPro.text = "";
         }
 
 
@@ -59,7 +62,7 @@ namespace jsch
                 // so that it doesn't trigger again
                 if(onlyShowOnce) {
                     var collider = GetComponent<Collider>();
-                    Destroy(collider);
+                    collider.enabled = false;
                 }
             }
         }
@@ -76,7 +79,17 @@ namespace jsch
 
         void ShowNextDialog()
         {
+            // if we're out of bounds, clear text and return
+            if(currentDialogIndex >= dialog.Length) {
+                textMeshPro.text = "";
+                return;
+            }
+
             textMeshPro.text = "";
+            Color textColor = dialog[currentDialogIndex].textColor;
+            textColor.a = 1.0f;
+            textMeshPro.color = textColor;
+            StartCoroutine("TypeDialogText");
         }
 
 
@@ -91,7 +104,21 @@ namespace jsch
             for(int i = 0; i < text.Length; i++) {
                 textMeshPro.text += text[i];
                 yield return new WaitForSeconds(timeBetweenTypingChars);
-            }            
+            }          
+            
+            
+
+            // if we're waiting for player to click...
+            if(dialog[currentDialogIndex].waitForClick) {
+                // wait for click...
+                currentDialogIndex++;
+            }
+            // otherwise, wait "waitTime" and auto queue the next dialog text
+            else {
+                yield return new WaitForSeconds(dialog[currentDialogIndex].waitTime);
+                currentDialogIndex++;
+                ShowNextDialog();
+            }
         } 
 
     }
