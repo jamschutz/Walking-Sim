@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Joey/Scenes/JoeyPrototype1.unity
+    guid: 79b133424a1de4a4288664492b42f40f
+  - enabled: 1
+    path: Assets/Joey/Scenes/JoeyPrototype2.unity
+    guid: 68e4d08b22aafaf49aadbfc1023727f0
   m_configObjects: {}
