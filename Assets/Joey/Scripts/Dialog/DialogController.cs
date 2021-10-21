@@ -11,6 +11,7 @@ namespace jsch
         public string text;
         public Color textColor;
         public bool isPlayerSpeaking;
+        public TMP_Text tmp;
         public bool waitForClick = false;
         public float waitTime = 5.0f;
     }
@@ -34,12 +35,12 @@ namespace jsch
     // ------ PRIVATE VARS -------------------------------------- //
         private DialogAudio dialogAudio;
         int currentDialogIndex;
-        TMP_Text textMeshPro;
+        // TMP_Text textMeshPro;
         
         const float maxTimeBetweenTypingChars = 1.001f;
         float timeBetweenTypingChars;
 
-        TMP_Text globalPlayerTMP;
+        // TMP_Text globalPlayerTMP;
 
 
 
@@ -47,14 +48,15 @@ namespace jsch
         void Start()
         {
             dialogAudio = GetComponent<DialogAudio>();
-            textMeshPro = GetComponent<TMP_Text>();
-            globalPlayerTMP = GameObject.Find("Player TMP").GetComponent<TMP_Text>();
+            // textMeshPro = GetComponent<TMP_Text>();
+            // globalPlayerTMP = GameObject.Find("Player TMP").GetComponent<TMP_Text>();
             currentDialogIndex = 0;
             timeBetweenTypingChars = maxTimeBetweenTypingChars - typingSpeed;
 
             // wipe text at the start
-            textMeshPro.text = "";
-            globalPlayerTMP.text = "";
+            WipeAllDialog();
+            // textMeshPro.text = "";
+            // globalPlayerTMP.text = "";
         }
 
 
@@ -87,15 +89,15 @@ namespace jsch
         {
             // if we're out of bounds, clear text and return
             if(currentDialogIndex >= dialog.Length) {
-                textMeshPro.text = "";
+                WipeAllDialog();
                 return;
             }
 
-            textMeshPro.text = "";
-            globalPlayerTMP.text = "";
+            // textMeshPro.text = "";
+            // globalPlayerTMP.text = "";
             Color textColor = dialog[currentDialogIndex].textColor;
             textColor.a = 1.0f;
-            textMeshPro.color = textColor;
+            dialog[currentDialogIndex].tmp.color = textColor;
             StartCoroutine("TypeDialogText");
         }
 
@@ -105,8 +107,9 @@ namespace jsch
             // get current text
             string text = dialog[currentDialogIndex].text;
             float waitTime = dialog[currentDialogIndex].waitTime;
-            textMeshPro.text = "";
-            globalPlayerTMP.text = "";
+            var tmp = dialog[currentDialogIndex].tmp;
+            tmp.text = "";
+            // globalPlayerTMP.text = "";
 
             string textOutput = "";
 
@@ -114,10 +117,10 @@ namespace jsch
             for(int i = 0; i < text.Length; i++) {
                 if(dialog[currentDialogIndex].isPlayerSpeaking) {
                     textOutput += text[i];
-                    globalPlayerTMP.text = $"[{textOutput}]";
+                    tmp.text = $"[{textOutput}]";
                 }
                 else {
-                    textMeshPro.text += text[i];
+                    tmp.text += text[i];
                 }
                 
                 yield return new WaitForSeconds(timeBetweenTypingChars);
@@ -137,6 +140,14 @@ namespace jsch
                 ShowNextDialog();
             }
         } 
+
+
+        void WipeAllDialog()
+        {
+            foreach(var d in dialog) {
+                d.tmp.text = "";
+            }
+        }
 
     }
 }
