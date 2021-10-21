@@ -22,7 +22,7 @@ namespace jsch
     // ------ PUBLIC VARS -------------------------------------- //
         public Dialog[] dialog;
 
-        [Range(0.001f, 1)]
+        [Range(0.9f, 1)]
         public float typingSpeed;
 
         public bool onlyShowOnce = true;
