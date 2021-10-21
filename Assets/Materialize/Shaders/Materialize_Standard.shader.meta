@@ -1,9 +1,26 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+<<<<<<< HEAD:Assets/Materialize/Shaders/Materialize_Standard.shader.meta
+guid: 8b6fe4fa204f8504c8ecc6b762a1bcd8
+timeCreated: 1443720195
+licenseType: Pro
+=======
+guid: 8e5e98651a8c9e84f8d89a0968bc7e6c
+>>>>>>> 3f19a70 (City Playtest Blockout):Assets/NMGSandDunesMat/Shaders/PolygonGradient.hlsl.meta
+ShaderImporter:
+  defaultTextures: []
+<<<<<<< HEAD:Assets/Materialize/Shaders/Materialize_Standard.shader.meta
+=======
+  nonModifiableTextures: []
+  preprocessorOverride: 0
+>>>>>>> 3f19a70 (City Playtest Blockout):Assets/NMGSandDunesMat/Shaders/PolygonGradient.hlsl.meta
+=======
 guid: 39ac3a9f1a858134a9b210383cd8ad5f
 timeCreated: 1443720195
 licenseType: Pro
 ShaderImporter:
   defaultTextures: []
+>>>>>>> 45bdd53902fbd721b298582a20a7b417e4faa73f
   userData: 
   assetBundleName: 
   assetBundleVariant: 
