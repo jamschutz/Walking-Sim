@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+<<<<<<< HEAD:Assets/EverythingLibrary/EverythingLibrary_Consumables.meta
+guid: d83b98a5fa0de774fa5b413ebe3ee780
+=======
+guid: ec6c782dea8cf29449f93f2988287c5d
+>>>>>>> 3f19a70 (City Playtest Blockout):Assets/Lorg/Lorg_Mat.meta
+=======
 guid: 0ad327f8bb7984b4b995ee0bd8a39657
+>>>>>>> 45bdd53902fbd721b298582a20a7b417e4faa73f
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
