@@ -10,10 +10,12 @@ namespace jsch
     {
         public string text;
         public Color textColor;
-        public string speakerName;
+        public bool isPlayerSpeaking;
         public bool waitForClick = false;
         public float waitTime = 5.0f;
     }
+
+
 
     [RequireComponent(typeof(DialogAudio))]
     [RequireComponent(typeof(Collider))]
@@ -37,6 +39,8 @@ namespace jsch
         const float maxTimeBetweenTypingChars = 1.001f;
         float timeBetweenTypingChars;
 
+        TMP_Text globalPlayerTMP;
+
 
 
     // ------ LIFECYCLE FUNCTIONS -------------------------------------- //
@@ -44,11 +48,13 @@ namespace jsch
         {
             dialogAudio = GetComponent<DialogAudio>();
             textMeshPro = GetComponent<TMP_Text>();
+            globalPlayerTMP = GameObject.Find("Player TMP").GetComponent<TMP_Text>();
             currentDialogIndex = 0;
             timeBetweenTypingChars = maxTimeBetweenTypingChars - typingSpeed;
 
             // wipe text at the start
             textMeshPro.text = "";
+            globalPlayerTMP.text = "";
         }
 
 
@@ -86,6 +92,7 @@ namespace jsch
             }
 
             textMeshPro.text = "";
+            globalPlayerTMP.text = "";
             Color textColor = dialog[currentDialogIndex].textColor;
             textColor.a = 1.0f;
             textMeshPro.color = textColor;
@@ -99,10 +106,20 @@ namespace jsch
             string text = dialog[currentDialogIndex].text;
             float waitTime = dialog[currentDialogIndex].waitTime;
             textMeshPro.text = "";
+            globalPlayerTMP.text = "";
+
+            string textOutput = "";
 
             // show character one by one, pausing between characters
             for(int i = 0; i < text.Length; i++) {
-                textMeshPro.text += text[i];
+                if(dialog[currentDialogIndex].isPlayerSpeaking) {
+                    textOutput += text[i];
+                    globalPlayerTMP.text = $"[{textOutput}]";
+                }
+                else {
+                    textMeshPro.text += text[i];
+                }
+                
                 yield return new WaitForSeconds(timeBetweenTypingChars);
             }          
             
