@@ -1303,7 +1303,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7382130484875753578}
   m_Layer: 0
-  m_Name: LorgScenePrefab - Joey Edition
+  m_Name: CityScene
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
