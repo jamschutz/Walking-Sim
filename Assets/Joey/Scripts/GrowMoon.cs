@@ -10,12 +10,22 @@ public class GrowMoon : MonoBehaviour
 
     bool isGrowing;
     Vector3 scaleIncrement;
+    bool isGrowingFaster;
 
 
     void Start()
     {
         isGrowing = growOnAwake;
+        isGrowingFaster = false;
         scaleIncrement = new Vector3(scaleSpeed, scaleSpeed, scaleSpeed);
+    }
+
+
+    void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Player") {
+            isGrowingFaster = true;
+        }
     }
 
 
@@ -24,6 +34,11 @@ public class GrowMoon : MonoBehaviour
         if(isGrowing && transform.localScale.x < maxSize)
         {
             transform.localScale += scaleIncrement * Time.deltaTime;
+        }
+
+        if(isGrowingFaster)
+        {
+            // scaleIncrement *= 1.0f * Time.deltaTime;
         }
     }
 

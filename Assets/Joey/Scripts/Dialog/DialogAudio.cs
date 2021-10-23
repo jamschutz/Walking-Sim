@@ -35,6 +35,10 @@ namespace jsch
 			}
 
 			currentAudioIndex = 0;
+
+			// show error if no clips assigned
+			if(clips.Length == 0)
+				Debug.LogError($"There are no clips assigned to the DialogAudio component on game object {gameObject.name}. Did you forget to add audio clips?");
 		}
 
 		public void Play()
