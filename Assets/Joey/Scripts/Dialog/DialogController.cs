@@ -11,6 +11,7 @@ namespace jsch
         public string text;
         public Color textColor;
         public bool isPlayerSpeaking;
+        public bool clearAfterWait = false;
         public TMP_Text tmp;
         public bool waitForClick = false;
         public float waitTime = 5.0f;
@@ -18,7 +19,6 @@ namespace jsch
 
 
 
-    [RequireComponent(typeof(DialogAudio))]
     [RequireComponent(typeof(Collider))]
     public class DialogController : MonoBehaviour
     {
@@ -29,34 +29,48 @@ namespace jsch
         public float typingSpeed;
 
         public bool onlyShowOnce = true;
+        public bool playSound = true;
 
 
 
     // ------ PRIVATE VARS -------------------------------------- //
         private DialogAudio dialogAudio;
         int currentDialogIndex;
-        // TMP_Text textMeshPro;
         
         const float maxTimeBetweenTypingChars = 1.001f;
         float timeBetweenTypingChars;
-
-        // TMP_Text globalPlayerTMP;
+        bool isWaitingForClick;
 
 
 
     // ------ LIFECYCLE FUNCTIONS -------------------------------------- //
         void Start()
         {
-            dialogAudio = GetComponent<DialogAudio>();
-            // textMeshPro = GetComponent<TMP_Text>();
-            // globalPlayerTMP = GameObject.Find("Player TMP").GetComponent<TMP_Text>();
+            if(playSound) {
+                dialogAudio = GetComponent<DialogAudio>();
+
+                // show error if no DialogAudio component
+                if(dialogAudio == null)
+                    Debug.LogError($"You set 'Play Sound' to true for Dialog Controller {gameObject.name} but there's no Dialog Audio component. Did you forget to add the component?");
+            }
             currentDialogIndex = 0;
             timeBetweenTypingChars = maxTimeBetweenTypingChars - typingSpeed;
+            isWaitingForClick = false;
 
             // wipe text at the start
             WipeAllDialog();
-            // textMeshPro.text = "";
-            // globalPlayerTMP.text = "";
+        }
+
+
+        // checking left click seems to have problems in coroutines, so doing it in here
+        void Update()
+        {
+            if(isWaitingForClick) {
+                // check for left mouse click
+                if(Input.GetMouseButtonDown(0)) {
+                    isWaitingForClick = false;
+                }
+            }
         }
 
 
@@ -93,8 +107,6 @@ namespace jsch
                 return;
             }
 
-            // textMeshPro.text = "";
-            // globalPlayerTMP.text = "";
             Color textColor = dialog[currentDialogIndex].textColor;
             textColor.a = 1.0f;
             dialog[currentDialogIndex].tmp.color = textColor;
@@ -109,7 +121,6 @@ namespace jsch
             float waitTime = dialog[currentDialogIndex].waitTime;
             var tmp = dialog[currentDialogIndex].tmp;
             tmp.text = "";
-            // globalPlayerTMP.text = "";
 
             string textOutput = "";
 
@@ -123,22 +134,37 @@ namespace jsch
                     tmp.text += text[i];
                 }
                 
+                // play audio
+                if(playSound)
+                    dialogAudio.Play();
+
                 yield return new WaitForSeconds(timeBetweenTypingChars);
             }          
-            
             
 
             // if we're waiting for player to click...
             if(dialog[currentDialogIndex].waitForClick) {
                 // wait for click...
-                currentDialogIndex++;
+                isWaitingForClick = true;
+
+                while(isWaitingForClick) {
+                    // we do the actual check in Update, eems like 
+                    // Coroutines are a little spotty catching left click events
+                    yield return null;
+                }
             }
             // otherwise, wait "waitTime" and auto queue the next dialog text
             else {
                 yield return new WaitForSeconds(dialog[currentDialogIndex].waitTime);
-                currentDialogIndex++;
-                ShowNextDialog();
             }
+            
+            // clear text if desired
+            if(dialog[currentDialogIndex].clearAfterWait) {
+                tmp.text = "";
+            }
+
+            currentDialogIndex++;
+            ShowNextDialog();
         } 
 
 

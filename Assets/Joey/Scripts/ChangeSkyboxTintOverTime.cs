@@ -16,6 +16,7 @@ public class ChangeSkyboxTintOverTime : MonoBehaviour
     {
         isTransitioning = transitionOnAwake;
         counter = 0;
+        SetSkyboxTint(startColor);
     }
 
 
@@ -31,8 +32,14 @@ public class ChangeSkyboxTintOverTime : MonoBehaviour
     }
 
 
+    public void BeginTransition()
+    {
+        isTransitioning = true;
+    }
+
+
     void SetSkyboxTint(Color tint)
     {
-        RenderSettings.skybox.SetColor("_Tint", tint);
+        RenderSettings.skybox.SetColor("_TintColor", tint);
     }
 }
