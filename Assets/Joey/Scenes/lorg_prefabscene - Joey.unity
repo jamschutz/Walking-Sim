@@ -12948,7 +12948,7 @@ MonoBehaviour:
     clearAfterWait: 0
     tmp: {fileID: 752997006}
     waitForClick: 0
-    waitTime: 1
+    waitTime: 2
   typingSpeed: 0.9737
   onlyShowOnce: 1
   playSound: 0
@@ -13213,14 +13213,14 @@ MonoBehaviour:
     clearAfterWait: 0
     tmp: {fileID: 1029334238}
     waitForClick: 0
-    waitTime: 0.5
+    waitTime: 1.5
   - text: Everyone's gone home! Everyone will be dead soon!
     textColor: {r: 1, g: 1, b: 1, a: 0}
     isPlayerSpeaking: 0
     clearAfterWait: 0
     tmp: {fileID: 1029334238}
     waitForClick: 0
-    waitTime: 0.5
+    waitTime: 2
   typingSpeed: 0.9737
   onlyShowOnce: 1
   playSound: 0
@@ -23297,7 +23297,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 865830007751547274, guid: 63b2c17d48187da47b5ac203116611d4, type: 3}
       propertyPath: m_margin.z
-      value: 9.426802
+      value: 9.496991
       objectReference: {fileID: 0}
     - target: {fileID: 865830007751547274, guid: 63b2c17d48187da47b5ac203116611d4, type: 3}
       propertyPath: m_fontAsset
@@ -30367,7 +30367,7 @@ MonoBehaviour:
     clearAfterWait: 0
     tmp: {fileID: 2050090290}
     waitForClick: 0
-    waitTime: 1
+    waitTime: 2
   typingSpeed: 0.9737
   onlyShowOnce: 1
   playSound: 0
@@ -48619,11 +48619,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 406762090954703265, guid: cd26e154a68707449a25d6a0b2d8d08c, type: 3}
       propertyPath: dialog.Array.data[1].waitTime
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 406762090954703265, guid: cd26e154a68707449a25d6a0b2d8d08c, type: 3}
       propertyPath: dialog.Array.data[2].waitTime
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 406762090954703265, guid: cd26e154a68707449a25d6a0b2d8d08c, type: 3}
+      propertyPath: dialog.Array.data[3].waitTime
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 406762090954703265, guid: cd26e154a68707449a25d6a0b2d8d08c, type: 3}
       propertyPath: dialog.Array.data[3].textColor.b
