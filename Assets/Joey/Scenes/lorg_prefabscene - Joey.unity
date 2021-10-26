@@ -36493,14 +36493,14 @@ MonoBehaviour:
   - text: "Hey, I want to tell you\u2026"
     textColor: {r: 1, g: 1, b: 1, a: 0}
     isPlayerSpeaking: 1
-    clearAfterWait: 0
+    clearAfterWait: 1
     tmp: {fileID: 339974207}
     waitForClick: 0
     waitTime: 2
   - text: 'Today''s sky is really beautiful, isn''t it? '
     textColor: {r: 1, g: 1, b: 1, a: 0}
     isPlayerSpeaking: 0
-    clearAfterWait: 0
+    clearAfterWait: 1
     tmp: {fileID: 581255814}
     waitForClick: 0
     waitTime: 3
