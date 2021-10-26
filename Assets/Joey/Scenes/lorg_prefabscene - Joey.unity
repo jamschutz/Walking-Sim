@@ -34740,6 +34740,8 @@ GameObject:
   - component: {fileID: 1433884683}
   - component: {fileID: 1433884682}
   - component: {fileID: 1433884685}
+  - component: {fileID: 1433884687}
+  - component: {fileID: 1433884686}
   m_Layer: 0
   m_Name: Ending Dialog
   m_TagString: Untagged
@@ -34875,6 +34877,49 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   waitTime: 6
+--- !u!114 &1433884686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1433884680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9591765107d78ad48ac53811d21b9e66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventToTriggerOnEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1433884687}
+        m_TargetAssemblyTypeName: FreezePlayerPosition, Assembly-CSharp
+        m_MethodName: FreezePlayer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  eventToTriggerOnExit:
+    m_PersistentCalls:
+      m_Calls: []
+  waitTime: 0
+--- !u!114 &1433884687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1433884680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fc096c6a5c450c4b985e71a4f5d1c51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1446120354
 GameObject:
   m_ObjectHideFlags: 0
