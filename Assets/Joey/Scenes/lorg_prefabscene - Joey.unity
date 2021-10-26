@@ -36496,21 +36496,21 @@ MonoBehaviour:
     clearAfterWait: 0
     tmp: {fileID: 339974207}
     waitForClick: 0
-    waitTime: 1
+    waitTime: 2
   - text: 'Today''s sky is really beautiful, isn''t it? '
     textColor: {r: 1, g: 1, b: 1, a: 0}
     isPlayerSpeaking: 0
     clearAfterWait: 0
     tmp: {fileID: 581255814}
     waitForClick: 0
-    waitTime: 1
+    waitTime: 3
   - text: Yes.
     textColor: {r: 1, g: 1, b: 1, a: 0}
     isPlayerSpeaking: 1
     clearAfterWait: 0
     tmp: {fileID: 339974207}
     waitForClick: 0
-    waitTime: 1
+    waitTime: 2
   typingSpeed: 0.9737
   onlyShowOnce: 1
   playSound: 0
@@ -36588,7 +36588,7 @@ MonoBehaviour:
   eventToTriggerOnExit:
     m_PersistentCalls:
       m_Calls: []
-  waitTime: 6
+  waitTime: 10
 --- !u!114 &1433884686
 MonoBehaviour:
   m_ObjectHideFlags: 0
