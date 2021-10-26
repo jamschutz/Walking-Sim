@@ -2084,6 +2084,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1446039359585240483, guid: c7bcf7b5eb99e0c488640253c147a294, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1446102605802469225, guid: c7bcf7b5eb99e0c488640253c147a294, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1446166593055490087, guid: c7bcf7b5eb99e0c488640253c147a294, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1447654388721747887, guid: c7bcf7b5eb99e0c488640253c147a294, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1461294462331906587, guid: c7bcf7b5eb99e0c488640253c147a294, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 749893d2eefe544fa9e84282bae1e34c, type: 3}
+    - target: {fileID: 1643377664736663007, guid: c7bcf7b5eb99e0c488640253c147a294, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4434833176133101192, guid: c7bcf7b5eb99e0c488640253c147a294, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -9228,6 +9252,24 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &410164451 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1447654388721747887, guid: c7bcf7b5eb99e0c488640253c147a294, type: 3}
+  m_PrefabInstance: {fileID: 76611290}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &410164455
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410164451}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.204787, y: 2.5893388, z: 2.2062361}
+  m_Center: {x: -0.00032076915, y: 1.2941108, z: 0.00057478726}
 --- !u!1 &420748124
 GameObject:
   m_ObjectHideFlags: 0
@@ -11905,6 +11947,10 @@ PrefabInstance:
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 865830007751547274, guid: 63b2c17d48187da47b5ac203116611d4, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 865830007751547274, guid: 63b2c17d48187da47b5ac203116611d4, type: 3}
       propertyPath: m_fontColor.b
       value: 0
@@ -36360,7 +36406,7 @@ MonoBehaviour:
     tmp: {fileID: 581255814}
     waitForClick: 0
     waitTime: 3
-  - text: Yes.
+  - text: It is. But you need to listen, I...
     textColor: {r: 1, g: 1, b: 1, a: 0}
     isPlayerSpeaking: 1
     clearAfterWait: 0
@@ -45356,6 +45402,24 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1882086019}
   m_Mesh: {fileID: -7713098230857101276, guid: eded81b10c3e7014db1e6739282f8420, type: 3}
+--- !u!1 &1890513722 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1446166593055490087, guid: c7bcf7b5eb99e0c488640253c147a294, type: 3}
+  m_PrefabInstance: {fileID: 76611290}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1890513726
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1890513722}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.2074544, y: 2.5893388, z: 2.2064302}
+  m_Center: {x: -0.0000047452368, y: 1.2941108, z: -0.00004653183}
 --- !u!1 &1895812348
 GameObject:
   m_ObjectHideFlags: 0
@@ -47005,7 +47069,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &1958556323
 Light:
   m_ObjectHideFlags: 0
@@ -48341,6 +48405,10 @@ PrefabInstance:
       propertyPath: dialog.Array.data[1].tmp
       value: 
       objectReference: {fileID: 339974207}
+    - target: {fileID: 7631577478513993032, guid: 139d9f2d29402654eb775aa6cee181d6, type: 3}
+      propertyPath: dialog.Array.data[1].text
+      value: I need to hurry. Waves are getting weirder.
+      objectReference: {fileID: 0}
     - target: {fileID: 7631577478513993039, guid: 139d9f2d29402654eb775aa6cee181d6, type: 3}
       propertyPath: m_LocalPosition.z
       value: -10.87
@@ -48395,6 +48463,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 139d9f2d29402654eb775aa6cee181d6, type: 3}
+--- !u!1 &2014857339 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1446102605802469225, guid: c7bcf7b5eb99e0c488640253c147a294, type: 3}
+  m_PrefabInstance: {fileID: 76611290}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &2014857343
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014857339}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.2046354, y: 2.5893388, z: 2.2061472}
+  m_Center: {x: -0.0002946027, y: 1.2941108, z: 0.00047173075}
 --- !u!43 &2023399526
 Mesh:
   m_ObjectHideFlags: 0
@@ -56695,6 +56781,10 @@ PrefabInstance:
     - target: {fileID: 7322151764065046016, guid: b36311ac88ee00a48a146829ef62833b, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7357212298829097834, guid: b36311ac88ee00a48a146829ef62833b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7357212298880247270, guid: b36311ac88ee00a48a146829ef62833b, type: 3}
       propertyPath: m_Mesh
