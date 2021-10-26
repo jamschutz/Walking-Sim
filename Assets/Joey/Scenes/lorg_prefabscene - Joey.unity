@@ -9822,7 +9822,7 @@ Transform:
   m_GameObject: {fileID: 487152406}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -153, y: 106.6, z: -99.2}
-  m_LocalScale: {x: 223.73, y: 223.73, z: 223.73}
+  m_LocalScale: {x: 146.1919, y: 146.1919, z: 146.1919}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 23
@@ -9839,7 +9839,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3dffbfa8ce34b24d85d56a4a67ef4c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleSpeed: 2
+  scaleSpeed: 3
   growOnAwake: 0
   maxSize: 250
 --- !u!1 &489388105
@@ -53630,6 +53630,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1414547127}
+    - target: {fileID: 7357212299441469515, guid: b36311ac88ee00a48a146829ef62833b, type: 3}
+      propertyPath: fadeTime
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7357212299663593456, guid: b36311ac88ee00a48a146829ef62833b, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -78391,6 +78395,10 @@ PrefabInstance:
     - target: {fileID: 7763426070287442703, guid: e8bf43db1f1ee994cbe32731c15c8d40, type: 3}
       propertyPath: m_Name
       value: Script Stuff
+      objectReference: {fileID: 0}
+    - target: {fileID: 8990940482376638016, guid: e8bf43db1f1ee994cbe32731c15c8d40, type: 3}
+      propertyPath: transitionTime
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8990940482615008892, guid: e8bf43db1f1ee994cbe32731c15c8d40, type: 3}
       propertyPath: growMoon
