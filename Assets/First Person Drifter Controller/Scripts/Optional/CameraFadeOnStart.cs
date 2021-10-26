@@ -21,4 +21,9 @@ public class CameraFadeOnStart : MonoBehaviour
 	{
 		CameraFade.StartAlphaFade(fadeColor, true, fadeTime);
 	}
+
+	public void FadeOut()
+	{
+		CameraFade.StartAlphaFade(fadeColor, false, fadeTime);
+	}
 }
