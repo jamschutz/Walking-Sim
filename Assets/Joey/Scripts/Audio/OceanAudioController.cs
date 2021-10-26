@@ -36,8 +36,6 @@ public class OceanAudioController : MonoBehaviour
         // float distance = Mathf.Abs(Vector3.Distance(player.position, transform.position));
         float distance = Mathf.Abs(player.position.x - transform.position.x);
 
-        Debug.Log($"distance: {distance}");
-
         // clamp distance between min and max volume
         distance = Mathf.Clamp(distance, minDistance, maxDistance);
 

@@ -8,12 +8,13 @@ public class EventOnTrigger : MonoBehaviour
 {
     public UnityEvent eventToTriggerOnEnter;
 	public UnityEvent eventToTriggerOnExit;
+	public float waitTime = 0;
 
 	void OnTriggerEnter(Collider other)
 	{
 		if (other.tag == "Player") 
 		{
-			eventToTriggerOnEnter.Invoke ();
+			Invoke("InvokeEnter", waitTime);
 		}
 	}
 
@@ -21,7 +22,18 @@ public class EventOnTrigger : MonoBehaviour
 	{
 		if (other.tag == "Player") 
 		{
-			eventToTriggerOnExit.Invoke ();
+			Invoke("InvokeExit", waitTime);
 		}
+	}
+
+
+	void InvokeEnter()
+	{
+		eventToTriggerOnEnter.Invoke();
+	}
+
+	void InvokeExit()
+	{
+		eventToTriggerOnExit.Invoke();
 	}
 }
