@@ -37744,6 +37744,7 @@ GameObject:
   - component: {fileID: 7357212299441469509}
   - component: {fileID: 7357212299441469505}
   - component: {fileID: 7357212299441469519}
+  - component: {fileID: 302703687043068298}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -37891,6 +37892,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resetBelowThisY: -100
   fadeInOnReset: 1
+--- !u!114 &302703687043068298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7357212299452190121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1ee1c62c905bb24ea7c9cf3d9d40b56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TraumaExponent: 1
+  MaximumAngularShake: {x: 5, y: 5, z: 5}
+  MaximumTranslationShake: {x: 0.75, y: 0.75, z: 0.75}
 --- !u!1 &7357212299452190123
 GameObject:
   m_ObjectHideFlags: 0
