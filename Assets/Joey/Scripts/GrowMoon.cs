@@ -5,19 +5,24 @@ using UnityEngine;
 public class GrowMoon : MonoBehaviour
 {
     public float scaleSpeed = 1.0f;
+    public float endingScaleSpeed = 5.0f;
     public bool growOnAwake = false;
     public float maxSize = 200;
 
     bool isGrowing;
     Vector3 scaleIncrement;
+    Vector3 endingScaleIncrement;
     bool isGrowingFaster;
+    bool isEnding;
 
 
     void Start()
     {
         isGrowing = growOnAwake;
         isGrowingFaster = false;
+        isEnding = false;
         scaleIncrement = new Vector3(scaleSpeed, scaleSpeed, scaleSpeed);
+        endingScaleIncrement = new Vector3(endingScaleSpeed, endingScaleSpeed, endingScaleSpeed);
     }
 
 
@@ -31,9 +36,14 @@ public class GrowMoon : MonoBehaviour
 
     void Update()
     {
+        Debug.Log($"is growing: {isGrowing} and is ending: {isEnding}");
         if(isGrowing && transform.localScale.x < maxSize)
         {
             transform.localScale += scaleIncrement * Time.deltaTime;
+        }
+        else if(isGrowing && isEnding)
+        {            
+            transform.localScale += endingScaleIncrement * Time.deltaTime;
         }
 
         if(isGrowingFaster)
@@ -46,5 +56,11 @@ public class GrowMoon : MonoBehaviour
     public void StartGrowing()
     {
         isGrowing = true;
+    }
+
+
+    public void StartEnding()
+    {
+        isEnding = true;
     }
 }
