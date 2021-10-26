@@ -69,14 +69,14 @@ public class CameraFade : MonoBehaviour
 				// If the difference between the current alpha and the desired alpha is smaller than delta-alpha * deltaTime, then we're pretty much done fading:
 				if (Mathf.Abs(instance.m_CurrentScreenOverlayColor.a - instance.m_TargetScreenOverlayColor.a) < Mathf.Abs(instance.m_DeltaColor.a) * Time.deltaTime)
 				{
-					instance.m_CurrentScreenOverlayColor = instance.m_TargetScreenOverlayColor;
-					SetScreenOverlayColor(instance.m_CurrentScreenOverlayColor);
-					instance.m_DeltaColor = new Color( 0,0,0,0 );
+					// instance.m_CurrentScreenOverlayColor = instance.m_TargetScreenOverlayColor;
+					// SetScreenOverlayColor(instance.m_CurrentScreenOverlayColor);
+					// instance.m_DeltaColor = new Color( 0,0,0,0 );
  
-					if( instance.m_OnFadeFinish != null )
-						instance.m_OnFadeFinish();
+					// if( instance.m_OnFadeFinish != null )
+					// 	instance.m_OnFadeFinish();
  
-					Die();
+					// Die();
 				}
 				else
 				{
