@@ -56710,11 +56710,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7357212299452223881, guid: b36311ac88ee00a48a146829ef62833b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -26.5
+      value: 5.9117584
       objectReference: {fileID: 0}
     - target: {fileID: 7357212299452223881, guid: b36311ac88ee00a48a146829ef62833b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.3
+      value: 8.494841
       objectReference: {fileID: 0}
     - target: {fileID: 7357212299663593456, guid: b36311ac88ee00a48a146829ef62833b, type: 3}
       propertyPath: m_Mesh
